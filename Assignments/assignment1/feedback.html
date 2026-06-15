@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feedback Form</title>
+</head>
+<body>
+  <h2>Feedback Form</h2>
+  <hr />
+
+  <form method="post" action="#">
+    <!-- Basic Information -->
+    <label for="fullname">Full Name</label>
+    <br />
+    <input
+      type="text"
+      placeholder="Enter your full name"
+      name="fullname"
+      id="fullname"
+      required
+      minlength="3"
+      maxlength="50"
+    />
+    <br /><br />
+
+    <label for="email">Email Address</label>
+    <br />
+    <input
+      type="email"
+      placeholder="Enter your email"
+      name="email"
+      id="email"
+      required
+    />
+    <br /><br />
+
+    <!-- Rating Section (Radio Buttons) -->
+    <p>Select your satisfaction level:</p>
+    <input type="radio" name="rating" id="very-satisfied" value="very-satisfied" required />
+    <label for="very-satisfied">Very Satisfied</label>
+    <br />
+    <input type="radio" name="rating" id="satisfied" value="satisfied" />
+    <label for="satisfied">Satisfied</label>
+    <br />
+    <input type="radio" name="rating" id="neutral" value="neutral" />
+    <label for="neutral">Neutral</label>
+    <br />
+    <input type="radio" name="rating" id="unsatisfied" value="unsatisfied" />
+    <label for="unsatisfied">Unsatisfied</label>
+    <br /><br />
+
+    <!-- Interests Section (Checkboxes) -->
+    <p>Select your areas of interest:</p>
+    <input type="checkbox" name="interests" id="web-dev" value="web-development" />
+    <label for="web-dev">Web Development</label>
+    <br />
+    <input type="checkbox" name="interests" id="mobile-dev" value="mobile-development" />
+    <label for="mobile-dev">Mobile Development</label>
+    <br />
+    <input type="checkbox" name="interests" id="ai-ml" value="ai-machine-learning" />
+    <label for="ai-ml">AI & Machine Learning</label>
+    <br /><br />
+
+    <!-- Country Selection (Select Dropdown) -->
+    <label for="country">Country</label>
+    <br />
+    <select name="country" id="country" required>
+      <option value="">--Select your country--</option>
+      <option value="nepal">Nepal</option>
+      <option value="us">United States</option>
+      <option value="canada">Canada</option>
+      <option value="uk">United Kingdom</option>
+    </select>
+    <br /><br />
+
+    <!-- Feedback Message (Textarea) -->
+    <label for="feedback-message">Write your feedback here</label>
+    <br />
+    <textarea
+      name="feedback"
+      id="feedback-message"
+      placeholder="Type your message here..."
+      rows="5"
+      cols="40"
+      required
+      minlength="10"
+      maxlength="500"
+    ></textarea>
+    <br /><br />
+
+    <!-- Submit Button -->
+    <input type="submit" value="Submit" />
+  </form>
+
+  <hr />
+  <p>
+    <a href="index.html">Home</a>
+  </p>
+</body>
+</html>
