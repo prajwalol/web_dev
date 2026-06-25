@@ -1,0 +1,141 @@
+:root {
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f3f6ff;
+  color: #1f2937;
+  line-height: 1.6;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(90deg, #2563eb, #4f46e5);
+  padding: 14px 24px;
+  display: flex;
+  gap: 16px;
+  z-index: 1000;
+}
+
+.navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.page-card {
+  width: min(900px, calc(100% - 32px));
+  margin: 90px auto 24px;
+  background-color: #ffffff;
+  border: 1px solid #dbe7ff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.12);
+  box-sizing: border-box;
+}
+
+h1,
+h2 {
+  color: #1d4ed8;
+}
+
+p,
+li,
+label {
+  color: #334155;
+}
+
+.intro-card {
+  text-align: center;
+}
+
+.highlight {
+  background-color: #fef3c7;
+  color: #92400e;
+  padding: 0 4px;
+  border-radius: 4px;
+}
+
+.main-content {
+  position: relative;
+  padding: 16px 20px 24px;
+  background-color: #eff6ff;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.absolute-note {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: #ef4444;
+  color: #ffffff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+.sticky-heading {
+  position: sticky;
+  top: 70px;
+  background-color: #ffffff;
+  padding: 8px 0;
+  z-index: 10;
+}
+
+form {
+  display: block;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  max-width: 420px;
+  padding: 8px;
+  margin-top: 6px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
+  margin-right: 6px;
+}
+
+input[type="submit"] {
+  width: auto;
+  padding: 10px 16px;
+  background: #2563eb;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+#feedback-form {
+  background: #f8fafc;
+  padding: 16px;
+  border-radius: 12px;
+}
+
+#about-title {
+  font-size: 2rem;
+}
+
+ul,
+ol {
+  padding-left: 20px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
