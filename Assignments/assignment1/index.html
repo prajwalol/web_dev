@@ -1,36 +1,77 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home - My First Webpage</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .inline-demo {
+      color: #0f766e;
+      font-weight: bold;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Welcome to My First Webpage</h1>
-  <hr />
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="feedback.html">Feedback</a>
+  </nav>
 
-  <p>
-    Hello! My name is <strong>Abishank</strong>, and I am a passionate student learning <em>web development</em>. 
-    I love coding and building interesting web projects.
-  </p>
+  <div class="page-card">
+    <div class="intro-card">
+      <h1>Welcome to My First Webpage</h1>
+      <hr />
+      <p>
+        Hello! My name is <strong>Abishank</strong>, and I am a passionate student learning <em>web development</em>.
+        I love coding and building interesting web projects.
+      </p>
+      <p class="inline-demo">This paragraph uses internal CSS for a custom highlight.</p>
+    </div>
 
-  <h2>My Hobbies</h2>
-  <ol>
-    <li>Coding and building web apps</li>
-    <li>Reading tech blogs and books</li>
-    <li>Playing video games</li>
-  </ol>
+    <div class="main-content">
+      <div class="absolute-note">Important</div>
+      <h2 class="sticky-heading">My Hobbies</h2>
+      <ol>
+        <li>Coding and building web apps</li>
+        <li>Reading tech blogs and books</li>
+        <li>Playing video games</li>
+      </ol>
 
-  <h2>My Favorite Foods</h2>
-  <ul>
-    <li>pasta</li>
-    <li>lasagna</li>
-    <li>Momos</li>
-  </ul>
+      <p>
+        <span class="highlight">Web design</span> is one of the most exciting parts of creating a website because every
+        small detail shapes the user experience.
+      </p>
+      <p>
+        I enjoy learning new tools, practicing layout skills, and improving the visual flow of every page I build.
+      </p>
+      <p>
+        This page includes extra content so it can be scrolled smoothly while the navigation bar remains fixed at the
+        top.
+      </p>
+      <p>
+        Consistent practice helps me understand how structure, style, and positioning work together in modern web pages.
+      </p>
+      <p>
+        Each project reminds me that good design is both functional and enjoyable for the people using it.
+      </p>
 
-  <hr />
-  <p>
-    <a href="about.html">About Me</a> | <a href="feedback.html">Feedback Form</a>
-  </p>
+      <h2 class="sticky-heading">My Favorite Foods</h2>
+      <ul>
+        <li>pasta</li>
+        <li>lasagna</li>
+        <li>Momos</li>
+      </ul>
+    </div>
+
+    <hr />
+    <p>
+      <a href="about.html">About Me</a> | <a href="feedback.html">Feedback Form</a>
+    </p>
+  </div>
 </body>
+
 </html>
