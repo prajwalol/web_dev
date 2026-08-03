@@ -56,6 +56,12 @@ function printRightTriangle(n) {
 
 if (typeof document !== "undefined") {
   const output = document.getElementById("output");
+  const evenOddInput = document.getElementById("even-odd-input");
+  const tableInput = document.getElementById("table-input");
+  const checkEvenOddButton = document.getElementById("check-even-odd");
+  const generateTableButton = document.getElementById("generate-table");
+  const evenOddResult = document.getElementById("even-odd-result");
+  const tableResult = document.getElementById("table-result");
 
   if (output) {
     output.textContent = [
@@ -70,6 +76,20 @@ if (typeof document !== "undefined") {
       "",
       printRightTriangle(5),
     ].join("\n");
+  }
+
+  if (checkEvenOddButton && evenOddInput && evenOddResult) {
+    checkEvenOddButton.addEventListener("click", () => {
+      const number = Number(evenOddInput.value);
+      evenOddResult.textContent = checkEvenOrOdd(number);
+    });
+  }
+
+  if (generateTableButton && tableInput && tableResult) {
+    generateTableButton.addEventListener("click", () => {
+      const number = Number(tableInput.value);
+      tableResult.textContent = multiplicationTable(number);
+    });
   }
 }
 
