@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Assignment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f4f7fb;
+            color: #1f2937;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 30px 20px 50px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .task {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            margin-top: 0;
+            color: #111827;
+        }
+
+        .color-box {
+            width: 200px;
+            height: 120px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #ffffff;
+            border: 2px solid #d1d5db;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: background 0.3s ease;
+        }
+
+        .output {
+            margin-top: 16px;
+            padding: 14px 16px;
+            border-radius: 8px;
+            background: #eef2ff;
+            border: 1px solid #c7d2fe;
+            min-height: 50px;
+            white-space: pre-line;
+        }
+
+        .code-block {
+            background: #111827;
+            color: #e5e7eb;
+            padding: 14px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-family: Consolas, monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>JavaScript Assignment Tasks</h1>
+
+        <section class="task">
+            <h2>Task 1: Dynamic Color Changer</h2>
+            <label for="colorPicker">Choose a color:</label>
+            <input type="color" id="colorPicker" value="#ffffff" />
+            <div id="colorBox" class="color-box">Pick a color</div>
+        </section>
+
+        <section class="task">
+            <h2>Task 2: Understanding Callbacks</h2>
+            <div id="callbackOutput" class="output"></div>
+        </section>
+
+        <section class="task">
+            <h2>Task 3: Callback Hell Example</h2>
+            <div id="callbackHellOutput" class="output"></div>
+        </section>
+
+        <section class="task">
+            <h2>Task 4: Promise Version</h2>
+            <div id="promiseOutput" class="output"></div>
+        </section>
+
+        <section class="task">
+            <h2>Task 5: Async / Await Version</h2>
+            <div id="asyncOutput" class="output"></div>
+        </section>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
