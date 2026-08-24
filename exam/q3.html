@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout</title>
+</head>
+
+<body>
+    <button id="logoutBtn">Logout</button>
+    <p id="message"></p>
+    <script>
+        document.getElementById("logoutBtn").addEventListener("click", function () {
+            let button = document.getElementById("logoutBtn");
+            let message = document.getElementById("message");
+            message.innerHTML = "Logging out...";
+            let logout = new Promise(function (resolve) {
+                setTimeout(function () {
+                    resolve();
+
+                }, 2000)
+            })
+            logout.then(function () {
+                message.innerText = "you have been logged out.";
+                button.innerText = "logged out";
+            })
+        })
+    </script>
+</body>
+
+</html>

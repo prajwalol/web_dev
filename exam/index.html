@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>question 1</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 70%;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        #message {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<h2>Users List</h2>
+
+<p id="loading">Loading users...</p>
+
+<table border="1" id="userTable">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Address</th>
+    </tr>
+    <tbody id="users"></tbody>
+</table>
+
+<script>
+    fetch("https://jsonplaceholder.typicode.com/users")
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Failed");
+            }
+            return response.json();
+        })
+        .then(data => {
+
+            document.getElementById("loading").style.display = "none";
+
+            let output = "";
+
+            data.forEach(user => {
+                output += `
+                        <tr>
+                            <td>${user.name}</td>
+                            <td>${user.email}</td>
+                            <td>${user.address.street}, ${user.address.city}</td>
+                        </tr>
+                    `;
+            });
+
+            document.getElementById("users").innerHTML = output;
+        })
+        .catch(error => {
+            document.getElementById("loading").innerText =
+                "Failed to load data";
+        });
+</script>
+
+
+</html>

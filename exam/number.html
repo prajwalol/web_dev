@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>number printing</title>
+</head>
+
+<body>
+    <script>
+        function printPattern(n) {
+            for (let i = 1; i <= n; i++) {
+                let row = "";
+                for (let j = 1; j <= i; j++) {
+                    row += j;
+                }
+                console.log(row);
+            }
+        }
+        printPattern(5);
+    </script>
+</body>
+
+</html>
